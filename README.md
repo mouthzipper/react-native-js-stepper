@@ -7,6 +7,9 @@
 
 React Native component to display a `Stepper`, a sequence of logical and numbered steps, frequently used for navigation.
 
+Update:
+Add `activeStep` props to manually control page position from parent component
+
 See more on:
 
 https://material.io/guidelines/components/steppers.html
@@ -53,6 +56,7 @@ export default class ViewScreen extends React.Component<Props> {
         inactiveStepTitleStyle={styles.inactiveStepTitle}
         activeStepNumberStyle={styles.activeStepNumber}
         inactiveStepNumberStyle={styles.inactiveStepNumber}>
+        activeStep={0}
         <View />
         <View />
       </Stepper>
@@ -111,7 +115,7 @@ const styles = StyleSheet.create({
 |  activeStepTitleStyle   |    Object     |                Styles object of title on active step                 |    No    |
 | inactiveStepTitleStyle  |    Object     |               Styles object of title on inactive step                |    No    |
 |       validation        |    boolean    |         Disables validation (related to top stepper numbers)         |    No    |
-|                         |               |                                                                      |          |
+|       activeStep        |    number     |           Set active position                                        |    No    |
 
 ## License
 
